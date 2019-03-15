@@ -1,4 +1,4 @@
-# RAK7243-LoRaGateway-RPi-LoRa-Gateway-OS
+# RAK7243-LTE-LoRaGateway-RPi-LoRa-Gateway-OS
 LoRa-Gateway-OS with LTE supported
 
 ##	Introduction 
@@ -9,7 +9,7 @@ The aim of this project is to help users set up a LoRa network easily. The User 
 
 This project currently provides support for the below platforms.
 
-* RAK７２４３
+* RAK7243 (with LTE)
 
 ##	Acknowledgments
 
