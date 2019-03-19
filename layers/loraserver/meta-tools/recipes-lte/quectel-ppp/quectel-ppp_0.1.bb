@@ -37,8 +37,7 @@ do_install () {
     install -m 0755 ${S}/quectel-chat-disconnect ${D}${sysconfdir}/ppp/peers/
     install -m 0755 ${S}/quectel-ip-up ${D}${sysconfdir}/ppp/peers/
     install -m 0755 ${S}/quectel-hat.sh ${D}${sysconfdir}/ppp/peers/quectel-hat.sh
-    install -d ${D}${sysconfdir}/monit.d
-    install -m 0644 ${WORKDIR}/quectel-ppp.monit ${D}${sysconfdir}/monit.d/quectel-ppp
+    install -m 0755 ${WORKDIR}/quectel-ppp.monit ${D}${sysconfdir}/ppp/peers/quectel-ppp.monit
     install -d ${D}${sysconfdir}/init.d
     install -m 0755 ${WORKDIR}/quectel-ppp.init ${D}${sysconfdir}/init.d/quectel-ppp
 }
@@ -51,7 +50,6 @@ FILES_${PN} += "{sysconfdir}/ppp/peers/quectel-chat-connect"
 FILES_${PN} += "{sysconfdir}/ppp/peers/quectel-chat-disconnect"
 FILES_${PN} += "{sysconfdir}/ppp/peers/quectel-ip-up"
 FILES_${PN} += "{sysconfdir}/ppp/peers/quectel-hat.sh"
-FILES_${PN} += "{sysconfdir}/monit.d/"
-FILES_${PN} += "{sysconfdir}/monit.d/quectel-ppp"
+FILES_${PN} += "{sysconfdir}/ppp/peers/quectel-ppp.monit"
 FILES_${PN} += "{sysconfdir}/init.d/"
 FILES_${PN} += "{sysconfdir}/init.d/quectel-ppp"

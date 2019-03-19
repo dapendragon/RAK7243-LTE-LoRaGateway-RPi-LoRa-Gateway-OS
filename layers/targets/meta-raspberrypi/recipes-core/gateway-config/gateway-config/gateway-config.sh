@@ -299,20 +299,20 @@ enable_lte(){
 
 do_enable(){
     cp /etc/ppp/peers/quectel-ip-up /etc/ppp/ip-up
-    /usr/sbin/update-rc.d ppp-start.sh start 99 2 3 4 5 .
+    cp /etc/ppp/peers/quectel-ppp.monit /etc/monit.d/quectel-ppp
     clear
     reboot
 }
 
 
 do_disable(){
-    /usr/sbin/update-rc.d -f ppp-start.sh remove
+    rm /etc/monit.d/quectel-ppp
     clear
     reboot
 }
 
 do_main_menu() {
-    FUN=$(dialog --title "LoRa Gateway OS(Rak 2.0.1)" --cancel-label "Quit" --menu "Configuration options:" 20 80 20 \
+    FUN=$(dialog --title "LoRa Gateway OS(Rak 2.0.2)" --cancel-label "Quit" --menu "Configuration options:" 20 80 20 \
         1 "Set admin password" \
         2 "Setup RAK7243 LoRa concentrator" \
         3 "Edit packet-forwarder config" \
